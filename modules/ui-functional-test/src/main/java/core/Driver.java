@@ -26,7 +26,7 @@ public class Driver implements WebDriver {
       case "chrome":
       default:
         System.setProperty(
-            "webdriver.chrome.driver", "src/main/resources/drivers/chromedriver.exe");
+            "webdriver.chrome.driver", "../src/main/resources/drivers/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         if (headless) {
           options.addArguments("--headless");
