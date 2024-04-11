@@ -30,9 +30,12 @@ jobs:
     - name: Build with Maven
       # run: mvn -B package --file pom.xml
       run: mvn checkstyle:checkstyle
+    run: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  run: dpkg -i google-chrome-stable_current_amd64.deb
+run: google-chrome --version
 
 
-  testing:
+testing:
 
       runs-on: ubuntu-latest
 
