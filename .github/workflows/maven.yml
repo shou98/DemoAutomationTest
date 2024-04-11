@@ -46,7 +46,7 @@ jobs:
           #          uses: actions/setup-java@v3
           with:
             java-version: '11'
-            distribution: 'oracle'
+#            distribution: 'oracle'
         - run: mvn clean verify -pl modules/ui-functional-test -Dbrowser=chrome
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
 #        - name: Update dependency graph
