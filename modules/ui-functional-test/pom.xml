@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <artifactId>ui-functional-test</artifactId>
+  <build>
+    <plugins>
+      <!--      <plugin>-->
+      <!--        <artifactId>maven-compiler-plugin</artifactId>-->
+      <!--        <configuration>-->
+      <!--          <source>11</source>-->
+      <!--          <target>11</target>-->
+      <!--        </configuration>-->
+      <!--        <version>3.8.1</version>-->
+      <!--      </plugin>-->
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <consoleOutputReporter>
+            <disable>true</disable>
+          </consoleOutputReporter>
+          <reportFormat>plain</reportFormat>
+          <statelessTestsetInfoReporter
+            implementation="${maven-surefire.testsetInfoReporter}">
+            <printStacktraceOnError>true</printStacktraceOnError>
+            <printStacktraceOnFailure>true</printStacktraceOnFailure>
+            <printStderrOnError>true</printStderrOnError>
+            <printStderrOnFailure>true</printStderrOnFailure>
+            <printStderrOnSuccess>false</printStderrOnSuccess>
+            <printStdoutOnError>true</printStdoutOnError>
+            <printStdoutOnFailure>true</printStdoutOnFailure>
+            <printStdoutOnSuccess>false</printStdoutOnSuccess>
+          </statelessTestsetInfoReporter>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <artifactId>maven-surefire-junit5-tree-reporter</artifactId>
+            <groupId>me.fabriciorby</groupId>
+            <version>${maven-surefire-junit5-tree-reporter-version}</version>
+          </dependency>
+        </dependencies>
+        <version>${maven-surefire-plugin-version}</version>
+      </plugin>
+      <!--      <plugin>-->
+      <!--        <artifactId>maven-surefire-plugin</artifactId>-->
+      <!--        <groupId>org.apache.maven.plugins</groupId>-->
+      <!--        <version>${maven-surefire-plugin-version}</version>-->
+      <!--      </plugin>-->
+      <plugin>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <executions>
+          <execution>
+            <configuration>
+              <includes>
+                <include>**/.java</include>
+              </includes>
+            </configuration>
+          </execution>
+        </executions>
+        <groupId>org.apache.maven.plugins</groupId>
+        <version>${maven-failsafe-plugin-version}</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <configuration>
+          <configLocation>google_checks.xml</configLocation>
+          <consoleOutput>true</consoleOutput>
+          <encoding>UTF-8</encoding>
+          <failOnViolation>true</failOnViolation>
+          <includeTestSourceDirectory>true</includeTestSourceDirectory>
+          <violationSeverity>warning</violationSeverity>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <artifactId>checkstyle</artifactId>
+            <groupId>com.puppycrawl.tools</groupId>
+            <version>10.15.0</version>
+          </dependency>
+        </dependencies>
+        <executions>
+          <execution>
+            <goals>
+              <goal>check</goal>
+            </goals>
+            <phase>test-compile</phase>
+          </execution>
+        </executions>
+        <groupId>org.apache.maven.plugins</groupId>
+        <version>3.3.1</version>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <artifactId>cucumber-java</artifactId>
+      <groupId>io.cucumber</groupId>
+      <version>${cucumber-java-version}</version>
+    </dependency>
+    <dependency>
+      <artifactId>selenium-api</artifactId>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <version>${selenium-api-version}</version>
+    </dependency>
+    <dependency>
+      <artifactId>selenium-chrome-driver</artifactId>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <version>${selenium-chrome-driver-version}</version>
+    </dependency>
+    <dependency>
+      <artifactId>cucumber-core</artifactId>
+      <groupId>io.cucumber</groupId>
+      <version>${cucumber-core-version}</version>
+    </dependency>
+    <dependency>
+      <artifactId>junit</artifactId>
+      <groupId>junit</groupId>
+      <scope>test</scope>
+      <version>${junit-version}</version>
+    </dependency>
+
+    <!--    <dependency>-->
+    <!--      <artifactId>webdrivermanager</artifactId>-->
+    <!--      <groupId>io.github.bonigarcia</groupId>-->
+    <!--      <version>${webdrivermanager-version}</version>-->
+    <!--    </dependency>-->
+    <dependency>
+      <artifactId>cucumber-junit</artifactId>
+      <groupId>io.cucumber</groupId>
+      <scope>test</scope>
+      <version>${cucumber-junit-version}</version>
+    </dependency>
+    <dependency>
+      <artifactId>junit-jupiter-api</artifactId>
+      <groupId>org.junit.jupiter</groupId>
+      <scope>test</scope>
+      <version>${junit-jupiter-api-version}</version>
+    </dependency>
+    <dependency>
+      <artifactId>selenium-support</artifactId>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <version>${selenium-support-version}</version>
+    </dependency>
+    <dependency>
+      <artifactId>google-java-format</artifactId>
+      <groupId>com.google.googlejavaformat</groupId>
+      <version>${google-java-format-version}</version>
+    </dependency>
+  </dependencies>
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <artifactId>Demo</artifactId>
+    <groupId>org.example</groupId>
+    <relativePath>../../pom.xml</relativePath>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <properties>
+    <cucumber-core-version>7.16.1</cucumber-core-version>
+    <cucumber-java-version>7.11.0</cucumber-java-version>
+    <cucumber-junit-version>7.16.1</cucumber-junit-version>
+    <google-java-format-version>1.22.0</google-java-format-version>
+    <junit-jupiter-api-version>5.10.2</junit-jupiter-api-version>
+    <junit-version>4.13.2</junit-version>
+    <maven-failsafe-plugin-version>3.0.0-M3</maven-failsafe-plugin-version>
+    <maven-surefire-junit5-tree-reporter-version>1.2.1</maven-surefire-junit5-tree-reporter-version>
+    <maven-surefire-plugin-version>3.2.5</maven-surefire-plugin-version>
+    <maven-surefire.testsetInfoReporter>
+      org.apache.maven.plugin.surefire.extensions.junit5.JUnit5StatelessTestsetInfoTreeReporter
+    </maven-surefire.testsetInfoReporter>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <selenium-api-version>4.5.0</selenium-api-version>
+    <selenium-chrome-driver-version>4.5.0</selenium-chrome-driver-version>
+    <selenium-support-version>4.16.1</selenium-support-version>
+    <webdrivermanager-version>5.3.0</webdrivermanager-version>
+  </properties>
+
+
+</project>
