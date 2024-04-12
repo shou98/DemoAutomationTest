@@ -9,8 +9,8 @@ public class PropertiesFile {
   static String projectPath = System.getProperty("user.dir") + "/";
   private static Properties properties;
   private static FileInputStream fileIn;
-  private static String propertiesFilePathRoot = "./src/main/resources/selenium.properties";
-  private static String dataAccount = "./src/main/resources/PropertiesPage/login.Properties";
+  private static String propertiesFilePathRoot = "src/main/resources/selenium.properties";
+  private static String dataAccount = "src/main/resources/propertiespage/login.Properties";
 
   /** getDataFromPropertiesFile. */
   public static String getDataFromPropertiesFile(String keyProp) {
