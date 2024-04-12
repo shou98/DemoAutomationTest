@@ -10,7 +10,7 @@ public class PropertiesFile {
   private static Properties properties;
   private static FileInputStream fileIn;
   private static String propertiesFilePathRoot = "src/main/resources/selenium.properties";
-  private static String dataAccount = "src/main/resources/propertiespage/login.Properties";
+  private static String dataAccount = "/src/main/resources/propertiespage/login.Properties";
 
   /** getDataFromPropertiesFile. */
   public static String getDataFromPropertiesFile(String keyProp) {
