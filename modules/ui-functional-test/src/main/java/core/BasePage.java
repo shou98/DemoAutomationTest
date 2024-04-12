@@ -21,7 +21,7 @@ public class BasePage {
     String browserName = Driver.getParameter("browser");
     driver = new Driver(browserName);
     if (env.contains("OrangeHrm")) {
-      driver.get(String.valueOf(orangeHrm));
+      driver.get(orangeHrm);
     }
   }
 }
