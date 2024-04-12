@@ -1,5 +1,6 @@
 package core;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import java.time.Duration;
 import java.util.List;
 import java.util.Set;
@@ -25,8 +26,7 @@ public class Driver implements WebDriver {
     switch (browserName) {
       case "chrome":
       default:
-        System.setProperty(
-            "webdriver.chrome.driver", "./src/main/resources/drivers/chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         if (headless) {
           options.addArguments("--headless");

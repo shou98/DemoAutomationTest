@@ -32,30 +32,27 @@ jobs:
       run: mvn checkstyle:checkstyle
 
 
-  install_chrome:
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-      - name: Set up JDK 11
-        uses: actions/setup-java@v3
-        with:
-          java-version: '11'
-          distribution: 'liberica'
-      #        cache: maven
-      - name: install chrome
-        # run: mvn -B package --file pom.xml
-        run: |
-            CHROME_VERSION=$(google-chrome --version | cut -f 3 -d ' ' | cut -d '.' -f 1) \
-              && CHROMEDRIVER_RELEASE=$(curl --location --fail --retry 3 http://chromedriver.storage.googleapis.com/LATEST_RELEASE_${CHROME_VERSION}) \
-              && curl --silent --show-error --location --fail --retry 3 --output /tmp/chromedriver_linux64.zip "http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_RELEASE/chromedriver_linux64.zip" \
-              && cd /tmp \
-              && unzip chromedriver_linux64.zip \
-              && rm -rf chromedriver_linux64.zip \
-              && sudo mv chromedriver /usr/local/bin/chromedriver \
-              && sudo chmod +x /usr/local/bin/chromedriver \
-              && chromedriver --version
+#  install_chrome:
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - uses: actions/checkout@v3
+#      - name: Set up JDK 11
+#        uses: actions/setup-java@v3
+#        with:
+#          java-version: '11'
+#          distribution: 'liberica'
+#      #        cache: maven
+#      - name: install chrome
+#        # run: mvn -B package --file pom.xml
+#        run: |
+#              curl --silent --show-error --location --fail --retry 3 --output /tmp/chromedriver_linux64.zip "https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip" \
+#              && cd /tmp \
+#              && unzip chromedriver_linux64.zip \
+#              && rm -rf chromedriver_linux64.zip \
+#              && sudo mv chromedriver /usr/local/bin/chromedriver \
+#              && sudo chmod +x /usr/local/bin/chromedriver \
+#              && chromedriver --version
 
   testing:
 

@@ -117,11 +117,11 @@
       <version>${junit-version}</version>
     </dependency>
 
-    <!--    <dependency>-->
-    <!--      <artifactId>webdrivermanager</artifactId>-->
-    <!--      <groupId>io.github.bonigarcia</groupId>-->
-    <!--      <version>${webdrivermanager-version}</version>-->
-    <!--    </dependency>-->
+        <dependency>
+          <artifactId>webdrivermanager</artifactId>
+          <groupId>io.github.bonigarcia</groupId>
+          <version>${webdrivermanager-version}</version>
+        </dependency>
     <dependency>
       <artifactId>cucumber-junit</artifactId>
       <groupId>io.cucumber</groupId>
@@ -172,7 +172,7 @@
     <selenium-api-version>4.5.0</selenium-api-version>
     <selenium-chrome-driver-version>4.5.0</selenium-chrome-driver-version>
     <selenium-support-version>4.16.1</selenium-support-version>
-    <webdrivermanager-version>5.3.0</webdrivermanager-version>
+    <webdrivermanager-version>5.8.0</webdrivermanager-version>
   </properties>
 
 
