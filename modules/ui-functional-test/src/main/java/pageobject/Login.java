@@ -4,11 +4,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import uicore.UiBasePage;
+import core.BasePage;
 import utils.PropertiesFile;
 
 /** Login. */
-public class Login extends UiBasePage {
+public class Login extends BasePage {
+  BasePage basePage;
   @FindBy(xpath = "//title[contains(text(),\"OrangeHRM\")]")
   private static WebElement title;
 

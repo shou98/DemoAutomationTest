@@ -5,10 +5,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.support.PageFactory;
 import pageobject.Login;
-import uicore.UiBasePage;
+import core.BasePage;
 
 /** LoginStepdefs. */
-public class LoginStepdefs extends UiBasePage {
+public class LoginStepdefs extends BasePage {
   Login login;
 
   /** Step. */
