@@ -43,8 +43,8 @@
   <groupId>org.example</groupId>
   <modelVersion>4.0.0</modelVersion>
   <modules>
-    <module>modules/api-functional-test</module>
     <module>modules/ui-functional-test</module>
+    <module>modules/api-functional-test</module>
   </modules>
   <packaging>pom</packaging>
   <properties>

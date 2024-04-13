@@ -7,7 +7,6 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import utils.PropertiesFile;
 
@@ -26,7 +25,6 @@ public class Driver implements WebDriver {
     switch (browserName) {
       case "chrome":
       default:
-        WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         if (headless) {
           options.addArguments("--headless");
@@ -34,8 +32,9 @@ public class Driver implements WebDriver {
         }
         options.addArguments("--remote-allow-origins=*");
         options.addArguments("start-maximized");
-        driver = new ChromeDriver(options);
+        driver = WebDriverManager.chromedriver().capabilities(options).create();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
         break;
     }
   }
