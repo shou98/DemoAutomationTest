@@ -116,12 +116,11 @@
       <scope>test</scope>
       <version>${junit-version}</version>
     </dependency>
-
-        <dependency>
-          <artifactId>webdrivermanager</artifactId>
-          <groupId>io.github.bonigarcia</groupId>
-          <version>${webdrivermanager-version}</version>
-        </dependency>
+    <dependency>
+      <artifactId>webdrivermanager</artifactId>
+      <groupId>io.github.bonigarcia</groupId>
+      <version>${webdrivermanager-version}</version>
+    </dependency>
     <dependency>
       <artifactId>cucumber-junit</artifactId>
       <groupId>io.cucumber</groupId>

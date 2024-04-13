@@ -24,11 +24,11 @@ public class Login extends BasePage {
   @FindBy(xpath = "//button[contains(.,'Login')]")
   private WebElement loginButton;
 
-  @FindBy(xpath = "//h6[text()='Dashboard']")
-  private WebElement dashBoard;
+  @FindBy(xpath = "//p[@class=\"oxd-userdropdown-name\"]")
+  private WebElement logoutDropdown;
 
-  @FindBy(xpath = "//input[@placeholder='Search']")
-  private WebElement search;
+  @FindBy(xpath = "//a[text() = 'Logout']")
+  private WebElement logoutbtn;
 
   public Login() {
     super();
@@ -59,9 +59,12 @@ public class Login extends BasePage {
     }
   }
 
-  /** get Title Dashboard. */
-  public void getTitleDashboard() {
-    explicitWaitElemenetVisible(dashBoard);
-    explicitWaitElemenetVisible(search);
+  /** logout.* */
+  public void logout() {
+    logoutDropdown.click();
+    logoutbtn.click();
+    title.isDisplayed();
+    inputUsername.isDisplayed();
+    inputPassword.isDisplayed();
   }
 }
