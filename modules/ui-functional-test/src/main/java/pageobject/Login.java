@@ -9,7 +9,6 @@ import utils.PropertiesFile;
 
 /** Login. */
 public class Login extends BasePage {
-  BasePage basePage;
   @FindBy(xpath = "//title[contains(text(),\"OrangeHRM\")]")
   private static WebElement title;
 
