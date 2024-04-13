@@ -1,6 +1,6 @@
 package uistepdefs;
 
-import static core.BasePage.driver;
+import static org.core.BasePage.driver;
 
 import io.cucumber.java.After;
 

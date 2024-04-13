@@ -3,9 +3,9 @@ package uistepdefs;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.core.BasePage;
 import org.openqa.selenium.support.PageFactory;
 import pageobject.Login;
-import core.BasePage;
 
 /** LoginStepdefs. */
 public class LoginStepdefs extends BasePage {
