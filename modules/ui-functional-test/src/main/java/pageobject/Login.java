@@ -1,14 +1,14 @@
 package pageobject;
 
-import core.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import uicore.UiBasePage;
 import utils.PropertiesFile;
 
 /** Login. */
-public class Login extends BasePage {
+public class Login extends UiBasePage {
   @FindBy(xpath = "//title[contains(text(),\"OrangeHRM\")]")
   private static WebElement title;
 
@@ -48,8 +48,8 @@ public class Login extends BasePage {
   /** input username and password. */
   public void inputUserAndPass(String username, String password) {
     if (username.contains("username") && password.contains("password")) {
-      String user = PropertiesFile.getDataFromPropertiesFile("username");
-      String pass = PropertiesFile.getDataFromPropertiesFile("password");
+      String user = PropertiesFile.getDataOrangeHrm("username");
+      String pass = PropertiesFile.getDataOrangeHrm("password");
       inputUsername.sendKeys(user);
       inputPassword.sendKeys(pass);
       loginButton.click();

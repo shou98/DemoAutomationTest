@@ -10,14 +10,14 @@ public class PropertiesFile {
   private static Properties properties;
   private static FileInputStream fileIn;
   private static String propertiesFilePathRoot = "src/main/resources/selenium.properties";
-  private static String dataAccount = "src/main/resources/propertiespage/login.Properties";
+  private static String orgHrmData = "src/main/resources/propertiespage/orangeHrmData.properties";
 
   /** getDataFromPropertiesFile. */
-  public static String getDataFromPropertiesFile(String keyProp) {
+  public static String getDataOrangeHrm(String keyProp) {
     properties = new Properties();
     String value = null;
     try {
-      fileIn = new FileInputStream(projectPath + dataAccount);
+      fileIn = new FileInputStream(projectPath + orgHrmData);
       properties.load(fileIn);
       value = properties.getProperty(keyProp);
     } catch (Exception exp) {
