@@ -2,7 +2,7 @@ Feature: [Login] Ensure user is able to login to OrangeHrm
 
   @Outline
   Scenario Outline: Login to OrangeHrm with valid username and password
-    Given Open " "
+    Given Open "OrangeHrm"
     When I login with <username> and <password>
     Then I login successfull on Dashboard page
     Examples:

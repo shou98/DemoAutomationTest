@@ -40,9 +40,8 @@ public class Login extends BasePage {
     PageFactory.initElements(driver, this);
   }
 
-  public void getTitle() throws InterruptedException {
+  public void getTitle() {
     title.isDisplayed();
-    Thread.sleep(2000);
   }
 
   /** input username and password. */
