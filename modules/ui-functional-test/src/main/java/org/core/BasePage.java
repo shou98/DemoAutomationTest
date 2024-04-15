@@ -8,6 +8,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.PropertiesFile;
@@ -17,15 +20,14 @@ import utils.PropertiesFile;
  */
 public class BasePage {
 
-  public WebDriver driver;
+  public static WebDriver driver;
   public Properties properties;
   public PropertiesFile propertiesFile;
   String browserName;
-
-  /**
-   * getParameter.
-   */
-
+  private static Integer ajaxWaitSeconds;
+  public static Integer getAjaxWaitSeconds() {
+    return ajaxWaitSeconds;
+  }
 
   public WebElement explicitWaitElemenetVisible(WebElement elements) {
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -70,5 +72,9 @@ public class BasePage {
   }
   public void close(){
     driver.close();
+  }
+  public void actionSendKeys(String keys) {
+    Actions act = new Actions(driver);
+    act.sendKeys(keys).perform();
   }
 }

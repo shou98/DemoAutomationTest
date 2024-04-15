@@ -1,24 +1,33 @@
 package pageobject;
 
-import org.openqa.selenium.By;
+import static org.junit.Assert.*;
+
+import org.core.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
+/**
+ * PageAdmin.
+ **/
+public class Admin extends BasePage {
 
-/**PageAdmin.**/
-public class Admin {
   @FindBy(xpath = "//a[contains(@class,\"oxd-main-menu-item\")][./span[text()='Admin']]")
   private static WebElement adminBtnDashboard;
   @FindBy(xpath = "//button[text() = ' Add ']")
   private static WebElement addBtnAdmin;
   @FindBy(xpath = "//div[contains(@class,\"oxd-select-text-input\")][1]")
   private static WebElement userRoleDropdown;
+  @FindBy(xpath = "//div[contains(@class,\"oxd-select-option\")][./span[text()='Admin']]")
+  private static WebElement roleAdminDropdown;
+
   @FindBy(xpath = "//label[contains(text(),'Status')]//parent::div//following-sibling::div//div[contains(@class,'oxd-select-text-input')]")
   private static WebElement statusUserDropdown;
   @FindBy(xpath = "//input[contains(@placeholder,\"Type for hints...\")]")
   private static WebElement inputEmployeeName;
+  @FindBy(xpath = "//div[contains(@class,\"oxd-autocomplete-option\")][./span[text()='Joy  Carter']]")
+  private static WebElement selectEmployeeName;
+
   @FindBy(
       xpath =
           "//div[@class='oxd-input-group oxd-input-field-bottom-space']//descendant::input[contains(@class, 'oxd-input oxd-input--active')]")
@@ -33,28 +42,38 @@ public class Admin {
   private static WebElement inputCfPassword;
   @FindBy(xpath = "//button[text() = ' Save ']")
   private static WebElement saveBtnAdmin;
+  @FindBy(xpath = "//p[text()='Successfully Saved']")
+  private static WebElement successPopup;
+
   WebDriver driver;
-  public Admin() {
-    super();
+
+  public Admin(WebDriver driver) {
+    this.driver = driver;
     PageFactory.initElements(driver, this);
   }
 
-  public Admin(String pageType, WebDriver driver) {
-    super();
-    PageFactory.initElements(driver, this);
-  }
-  /**Create new user on admin page.**/
+  /**
+   * Create new user on admin page.
+   **/
 
   public void createAdmin(
       String role, String employeeName, String status, String username, String password) {
-    Select userRole = new Select(driver.findElement(By.xpath(String.valueOf(userRoleDropdown))));
-    userRole.selectByValue(role);
-    Select statusUser =
-        new Select(driver.findElement(By.xpath(String.valueOf(statusUserDropdown))));
-    statusUser.selectByValue(status);
+    adminBtnDashboard.click();
+    addBtnAdmin.click();
+    userRoleDropdown.click();
+    roleAdminDropdown.click();
+    actionSendKeys(role);
+    explicitWaitElemenetVisible(statusUserDropdown);
+    statusUserDropdown.isDisplayed();
+    statusUserDropdown.click();
+    statusUserDropdown.sendKeys(status);
     inputEmployeeName.sendKeys(employeeName);
+    selectEmployeeName.click();
     inputUserName.sendKeys(username);
     inputPassword.sendKeys(password);
     inputCfPassword.sendKeys(password);
+    saveBtnAdmin.click();
+    driver.getCurrentUrl();
+    assertEquals(driver.getCurrentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers");
   }
 }

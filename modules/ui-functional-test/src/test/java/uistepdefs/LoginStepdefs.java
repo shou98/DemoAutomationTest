@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import java.io.IOException;
 import org.core.BasePage;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import pageobject.Dashboard;
 import pageobject.Login;
@@ -20,7 +21,7 @@ public class LoginStepdefs extends BasePage {
   public void openPage(String page) throws InterruptedException, IOException {
     open(page);
     login = PageFactory.initElements(driver, Login.class);
-    login.getTitle();
+    login.verifyTitle();
   }
 
   /** Step. */
@@ -35,11 +36,14 @@ public class LoginStepdefs extends BasePage {
 
   @Then("^I login successfull on Dashboard page")
   public void iloginsuccessfulondashboardpage() {
+    dashboard = PageFactory.initElements(driver, Dashboard.class);
     dashboard.dashboardIsDisplayed();
   }
 
   @And("I logout Admin successfully")
-  public void ilogoutAdminSuccessfully() {}
+  public void ilogoutAdminSuccessfully() {
+    login.logout();
+  }
 
   @And("I login with account of {string} {string} successfully")
   public void iloginWithAccountOfSuccessfully(String arg0, String arg1) {}

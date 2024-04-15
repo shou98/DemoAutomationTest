@@ -113,7 +113,6 @@
     <dependency>
       <artifactId>junit</artifactId>
       <groupId>junit</groupId>
-      <scope>test</scope>
       <version>${junit-version}</version>
     </dependency>
     <dependency>

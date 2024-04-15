@@ -6,24 +6,26 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-/**Dashboard.**/
+/**
+ * Dashboard.
+ **/
 public class Dashboard extends BasePage {
+
   WebDriver driver;
   @FindBy(xpath = "//h6[text()='Dashboard']")
   private WebElement dashBoard;
 
   @FindBy(xpath = "//input[@placeholder='Search']")
   private WebElement search;
-  public Dashboard() {
-    super();
+
+  public Dashboard(WebDriver driver) {
+    this.driver = driver;
     PageFactory.initElements(driver, this);
   }
 
-  public Dashboard(String pageType, WebDriver driver) {
-    super();
-    PageFactory.initElements(driver, this);
-  }
-  /** get Title Dashboard. */
+  /**
+   * get Title Dashboard.
+   */
   public void dashboardIsDisplayed() {
     dashBoard.isDisplayed();
     search.isDisplayed();

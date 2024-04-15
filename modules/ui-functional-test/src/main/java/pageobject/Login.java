@@ -7,14 +7,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.PropertiesFile;
 
-/** Login. */
+/**
+ * Login.
+ */
 public class Login extends BasePage {
+
   @FindBy(xpath = "//title[contains(text(),\"OrangeHRM\")]")
   private static WebElement title;
-
   public WebDriver driver;
   PropertiesFile propertiesFile;
-
   @FindBy(xpath = "//input[contains(@name, \"username\")]")
   private WebElement inputUsername;
 
@@ -29,22 +30,23 @@ public class Login extends BasePage {
 
   @FindBy(xpath = "//a[text() = 'Logout']")
   private WebElement logoutbtn;
+//  public Login() {
+//    super();
+//    PageFactory.initElements(driver, this);
+//  }
 
-  public Login() {
-    super();
+  public Login(WebDriver driver) {
+    this.driver =driver;
     PageFactory.initElements(driver, this);
   }
 
-  public Login(String pageType, WebDriver driver) {
-    super();
-    PageFactory.initElements(driver, this);
-  }
-
-  public void getTitle() {
+  public void verifyTitle() {
     title.isDisplayed();
   }
 
-  /** input username and password. */
+  /**
+   * input username and password.
+   */
   public void inputUserAndPass(String username, String password) {
     if (username.contains("username") && password.contains("password")) {
       String user = PropertiesFile.getDataOrangeHrm("username");
@@ -59,7 +61,9 @@ public class Login extends BasePage {
     }
   }
 
-  /** logout.* */
+  /**
+   * logout.*
+   */
   public void logout() {
     logoutDropdown.click();
     logoutbtn.click();
