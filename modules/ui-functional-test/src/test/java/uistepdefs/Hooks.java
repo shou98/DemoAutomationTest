@@ -1,14 +1,16 @@
 package uistepdefs;
 
-import io.cucumber.java.After;
-import org.core.BasePage;
-import org.openqa.selenium.WebDriver;
+import static org.core.BasePage.driver;
 
-/** Hook Config. */
-public class Hooks extends BasePage {
-  public WebDriver driver;
+import io.cucumber.java.After;
+
+/**
+ * Hook Config.
+ */
+public class Hooks {
+
   @After
   public void afterEveryScenarion() {
-    driver.close();
+    driver.quit();
   }
 }

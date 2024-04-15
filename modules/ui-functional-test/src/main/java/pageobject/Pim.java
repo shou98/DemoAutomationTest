@@ -41,9 +41,9 @@ public class Pim extends BasePage {
     firstName.sendKeys(inputFirstName);
     lastName.sendKeys(inputlastName);
     saveBtnPim.click();
-    explicitWaitElemenetVisible(personalDetailsPim);
+    explicitWaitElementVisible(successPopup);
     successPopup.isDisplayed();
+    explicitWaitElementVisible(personalDetailsPim);
     personalDetailsPim.isDisplayed();
-//    explicitWaitElemenetVisible(successPopup);
   }
 }

@@ -17,7 +17,7 @@ Feature: [Login] Ensure user is able to login to OrangeHrm
     And I Create successfully new Employee with information <FirstName> and <LastName> in Add Employee on PIM page
     And I create successfully new user with information <UserRole> <EmployeeName> <Status> <Username> <Password> on Admin page
     And I logout Admin successfully
-    And I login with account of "Username" "Password" successfully
+    And I login with <Username> and <Password> valid
     Then Dashboard page is Displayed with "First Name" "Last Name"
     Examples:
       | FirstName | LastName | EmployeeName | UserRole | Status    | Username         | Password          |

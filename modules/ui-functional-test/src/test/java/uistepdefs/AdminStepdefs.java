@@ -14,7 +14,8 @@ public class AdminStepdefs extends BasePage {
   @And(
       "I create successfully new user with information {string} {string} {string} {string} {string} on Admin page")
   public void icreateSuccessfullyNewWithInformationOnAdminPage(
-      String userRole, String employeeName, String status, String username, String password) {
+      String userRole, String employeeName, String status, String username, String password)
+      throws InterruptedException {
     admin = PageFactory.initElements(driver, Admin.class);
     admin.createAdmin(userRole, employeeName, status, username, password);
   }

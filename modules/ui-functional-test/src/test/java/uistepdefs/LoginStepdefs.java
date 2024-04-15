@@ -46,6 +46,6 @@ public class LoginStepdefs extends BasePage {
   }
 
   @And("I login with account of {string} {string} successfully")
-  public void iloginWithAccountOfSuccessfully(String arg0, String arg1) {}
+  public void iloginWithAccountOfSuccessfully(String user, String pass) {}
   
 }

@@ -23,6 +23,9 @@ public class Admin extends BasePage {
 
   @FindBy(xpath = "//label[contains(text(),'Status')]//parent::div//following-sibling::div//div[contains(@class,'oxd-select-text-input')]")
   private static WebElement statusUserDropdown;
+    @FindBy(xpath = "//div[@class = 'oxd-select-option']//span[text()= 'Enabled']")
+  private static WebElement statusEnabled;
+
   @FindBy(xpath = "//input[contains(@placeholder,\"Type for hints...\")]")
   private static WebElement inputEmployeeName;
   @FindBy(xpath = "//div[contains(@class,\"oxd-autocomplete-option\")][./span[text()='Joy  Carter']]")
@@ -32,6 +35,11 @@ public class Admin extends BasePage {
       xpath =
           "//div[@class='oxd-input-group oxd-input-field-bottom-space']//descendant::input[contains(@class, 'oxd-input oxd-input--active')]")
   private static WebElement inputUserName;
+    @FindBy(
+      xpath =
+          "//span[@class='oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message']")
+  private static WebElement redMessage;
+
   @FindBy(
       xpath =
           "//div[@class='oxd-input-group oxd-input-field-bottom-space']//descendant::input[contains(@type, 'password')]")
@@ -57,23 +65,23 @@ public class Admin extends BasePage {
    **/
 
   public void createAdmin(
-      String role, String employeeName, String status, String username, String password) {
+      String role, String employeeName, String status, String username, String password)
+      throws InterruptedException {
     adminBtnDashboard.click();
     addBtnAdmin.click();
     userRoleDropdown.click();
     roleAdminDropdown.click();
-    actionSendKeys(role);
-    explicitWaitElemenetVisible(statusUserDropdown);
-    statusUserDropdown.isDisplayed();
     statusUserDropdown.click();
-    statusUserDropdown.sendKeys(status);
+    statusEnabled.click();
     inputEmployeeName.sendKeys(employeeName);
     selectEmployeeName.click();
     inputUserName.sendKeys(username);
     inputPassword.sendKeys(password);
     inputCfPassword.sendKeys(password);
+    verifyElementNotDisplayed(redMessage);
+    Thread.sleep(1000);
     saveBtnAdmin.click();
-    driver.getCurrentUrl();
+    Thread.sleep(7000);
     assertEquals(driver.getCurrentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers");
   }
 }
