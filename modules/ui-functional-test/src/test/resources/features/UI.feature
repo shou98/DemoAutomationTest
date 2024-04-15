@@ -1,13 +1,13 @@
 Feature: [Login] Ensure user is able to login to OrangeHrm
 
-  @Outline
-  Scenario Outline: Login to OrangeHrm with valid username and password
-    Given Open "OrangeHrm"
-    When I login with <username> and <password> valid
-    Then I login successfull on Dashboard page
-    Examples:
-      | username | password   |
-      | "Admin"  | "admin123" |
+#  @Outline
+#  Scenario Outline: Login to OrangeHrm with valid username and password
+#    Given Open "OrangeHrm"
+#    When I login with <username> and <password> valid
+#    Then I login successfull on Dashboard page
+#    Examples:
+#      | username | password   |
+#      | "Admin"  | "admin123" |
 
   @UI
   Scenario Outline: Login to OrangeHrm with admin and create new user

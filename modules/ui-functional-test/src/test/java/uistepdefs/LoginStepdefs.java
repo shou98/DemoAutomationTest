@@ -4,6 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import java.io.IOException;
 import org.core.BasePage;
 import org.openqa.selenium.support.PageFactory;
 import pageobject.Dashboard;
@@ -16,7 +17,7 @@ public class LoginStepdefs extends BasePage {
 
   /** Step. */
   @Given("^Open \"([^\"]*)\"")
-  public void openPage(String page) throws InterruptedException {
+  public void openPage(String page) throws InterruptedException, IOException {
     open(page);
     login = PageFactory.initElements(driver, Login.class);
     login.getTitle();
