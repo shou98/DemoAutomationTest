@@ -16,3 +16,4 @@ mvn clean verify -pl modules/ui-functional-test -Dbrowser=chrome
 
 Check style code by google: 
 mvn checkstyle:checkstyle
+generating-report: need "surefire-report:report" after command line
