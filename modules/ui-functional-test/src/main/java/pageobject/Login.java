@@ -30,13 +30,12 @@ public class Login extends BasePage {
 
   @FindBy(xpath = "//a[text() = 'Logout']")
   private WebElement logoutbtn;
-//  public Login() {
-//    super();
-//    PageFactory.initElements(driver, this);
-//  }
 
+  /**
+   * Login.
+   **/
   public Login(WebDriver driver) {
-    this.driver =driver;
+    this.driver = driver;
     PageFactory.initElements(driver, this);
   }
 

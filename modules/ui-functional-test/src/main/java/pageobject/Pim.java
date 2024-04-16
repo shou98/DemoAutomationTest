@@ -27,6 +27,9 @@ public class Pim extends BasePage {
   private static WebElement successPopup;
   WebDriver driver;
 
+  /**
+   * PIM.
+   **/
   public Pim(WebDriver driver) {
     this.driver = driver;
     PageFactory.initElements(driver, this);

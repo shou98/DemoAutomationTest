@@ -43,6 +43,9 @@ public class BasePage {
     }
   }
 
+  /**
+   * invokeBrowser.
+   **/
   public void invokeBrowser() throws IOException {
     browserName = System.getProperty("browser");
     boolean headless =
@@ -60,8 +63,11 @@ public class BasePage {
     driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
   }
 
+  /**
+   * verifyElementNotDisplayed.
+   **/
   public boolean verifyElementNotDisplayed(WebElement element) throws InterruptedException {
-    Thread.sleep(3000);
+    explicitWaitElementVisible(element);
     try {
       if (element.isDisplayed()) {
         return false;

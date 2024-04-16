@@ -11,12 +11,17 @@ import org.openqa.selenium.support.PageFactory;
 import pageobject.Dashboard;
 import pageobject.Login;
 
-/** LoginStepdefs. */
+/**
+ * LoginStepdefs.
+ */
 public class LoginStepdefs extends BasePage {
+
   Login login;
   Dashboard dashboard;
 
-  /** Step. */
+  /**
+   * Step.
+   */
   @Given("^Open \"([^\"]*)\"")
   public void openPage(String page) throws InterruptedException, IOException {
     open(page);
@@ -24,7 +29,9 @@ public class LoginStepdefs extends BasePage {
     login.verifyTitle();
   }
 
-  /** Step. */
+  /**
+   * Step.
+   */
   @When("I login with {string} and {string} valid")
   public void iloginwithand(String user, String pass) {
     if (user.contains("username") && pass.contains("password")) {
@@ -46,6 +53,7 @@ public class LoginStepdefs extends BasePage {
   }
 
   @And("I login with account of {string} {string} successfully")
-  public void iloginWithAccountOfSuccessfully(String user, String pass) {}
-  
+  public void iloginWithAccountOfSuccessfully(String user, String pass) {
+  }
+
 }
