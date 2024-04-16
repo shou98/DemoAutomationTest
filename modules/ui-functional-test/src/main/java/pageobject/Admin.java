@@ -2,11 +2,13 @@ package pageobject;
 
 import static org.junit.Assert.assertEquals;
 
+import javax.swing.Action;
 import org.core.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -17,8 +19,9 @@ public class Admin extends BasePage {
 
   @FindBy(xpath = "//a[contains(@class,\"oxd-main-menu-item\")][./span[text()='Admin']]")
   private static WebElement adminBtnDashboard;
-  @FindBy(xpath = "//label[contains(text(),'Username')]/following::input")
-  private static WebElement searchUserF;
+  @FindBy(xpath = "//input[contains(@class,\"oxd-input--active\")]/following::input")
+  private static WebElement searchUser;
+
   @FindBy(xpath = "//button[text() = ' Search ']")
   private static WebElement searchBtnAdmin;
   @FindBy(xpath = "//i[@class=\"oxd-icon bi-trash\"]")
@@ -68,8 +71,9 @@ public class Admin extends BasePage {
    * check username before create.
    **/
   public void checkUserName(String username) throws InterruptedException {
-    searchUserF.click();
-    searchUserF.sendKeys(username);
+    searchUser.click();
+    Thread.sleep(1000);
+    searchUser.sendKeys(username);
     searchBtnAdmin.click();
     try {
       WebElement checkName = driver.findElement(
@@ -79,7 +83,7 @@ public class Admin extends BasePage {
       explicitWaitElementVisible(deleteBtnCfInAdmPage);
       deleteBtnCfInAdmPage.click();
     } catch (NoSuchElementException exception) {
-      System.out.println("Không tìm thấy user name");
+      System.out.println("User name không tồn tại");
     }
   }
 

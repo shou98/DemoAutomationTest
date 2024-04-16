@@ -28,7 +28,7 @@ public class BasePage {
   }
 
   public void explicitWaitElementVisible(WebElement elements) {
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     wait.until(ExpectedConditions.visibilityOf(elements));
   }
 
@@ -55,6 +55,10 @@ public class BasePage {
     if (browserName.equals("chrome") && headless) {
       options.addArguments("--headless");
       options.addArguments("--disable-gpu");
+      options.addArguments("--window-size=1920,1080");
+      options.addArguments("--ignore-certificate-errors");
+      options.addArguments("--no-sandbox");
+      options.addArguments("--disable-dev-shm-usage");
     }
     options.addArguments("--remote-allow-origins=*");
     options.addArguments("start-maximized");
