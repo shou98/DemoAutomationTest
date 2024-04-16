@@ -17,8 +17,8 @@ public class Admin extends BasePage {
 
   @FindBy(xpath = "//a[contains(@class,\"oxd-main-menu-item\")][./span[text()='Admin']]")
   private static WebElement adminBtnDashboard;
-  @FindBy(xpath = "//input[@class='oxd-input oxd-input--active'][not(@placeholder)]")
-  private static WebElement searchUser;
+  @FindBy(xpath = "//label[contains(text(),'Username')]/following::input")
+  private static WebElement searchUserF;
   @FindBy(xpath = "//button[text() = ' Search ']")
   private static WebElement searchBtnAdmin;
   @FindBy(xpath = "//i[@class=\"oxd-icon bi-trash\"]")
@@ -68,7 +68,8 @@ public class Admin extends BasePage {
    * check username before create.
    **/
   public void checkUserName(String username) throws InterruptedException {
-    searchUser.sendKeys(username);
+    searchUserF.click();
+    searchUserF.sendKeys(username);
     searchBtnAdmin.click();
     try {
       WebElement checkName = driver.findElement(
