@@ -1,6 +1,0 @@
-utils\PropertiesFile.class
-pageobject\Admin.class
-pageobject\Pim.class
-pageobject\Dashboard.class
-pageobject\Login.class
-org\core\BasePage.class
