@@ -1,0 +1,9 @@
+
+P
+java:S1118":Add a private constructor to hide the implicit public one.(ήγλ†
+<
+java:S1075	"&Remove this hard-coded path-delimiter.(ÒΊ
+E	java:S106"+Replace this use of System.out by a logger.(ι’ύÿÿÿÿ
+@	java:S106"+Replace this use of System.out by a logger.(§ξ£¥
+E	java:S106("+Replace this use of System.out by a logger.(ι’ύÿÿÿÿ
+@	java:S106)"+Replace this use of System.out by a logger.(§ξ£¥

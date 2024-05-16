@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: runners.TestSuite
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 34.31 s -- in runners.TestSuite
+Login to OrangeHrm with admin and create new user.Open "OrangeHrm" -- Time elapsed: 5.353 s
+Login to OrangeHrm with admin and create new user.I login with "username" and "password" valid -- Time elapsed: 0.504 s
+Login to OrangeHrm with admin and create new user.I login successfull on Dashboard page -- Time elapsed: 1.595 s
+Login to OrangeHrm with admin and create new user.I Create successfully new Employee with information "Joy" and "Carter" on PIM page -- Time elapsed: 8.364 s
+Login to OrangeHrm with admin and create new user.I created new user with "Admin" "Joy Carter" "Enabled" "adminjoycarter" "adminjoycarter1" on Admin page -- Time elapsed: 14.67 s
+Login to OrangeHrm with admin and create new user.I logout Admin successfully -- Time elapsed: 1.310 s
+Login to OrangeHrm with admin and create new user.I login with "adminjoycarter" and "adminjoycarter1" valid -- Time elapsed: 1.264 s
+Login to OrangeHrm with admin and create new user.Dashboard page is Displayed with "Joy" "Carter" -- Time elapsed: 0.410 s

@@ -1,0 +1,67 @@
+
+h
+java:S1192¯"JDefine a constant instead of duplicating this literal "HTTP/1.1 " 3 times.(°¬‡À8ï”šñ1
+L
+java:S1121Ó".Extract the assignment out of this expression.(Ú³ı’8ï”šñ1
+Q
+java:S1121à".Extract the assignment out of this expression.(„ƒ„Ëùÿÿÿÿ8ï”šñ1
+
+java:S1488·"^Immediately return this expression instead of assigning it to the temporary variable "detail".(Ê³Ñûÿÿÿÿ8ñ”šñ1
+t
+java:S1104"WMake dataPayload a static final constant or non-public and provide accessors if needed.(£à¿8ñ”šñ1
+s
+java:S1104"QMake token a static final constant or non-public and provide accessors if needed.(İ®¼àùÿÿÿÿ8ñ”šñ1
+N
+java:S1444"1Make this "public static dataPayload" field final(£à¿8ñ”šñ1
+M
+java:S1444"+Make this "public static token" field final(İ®¼àùÿÿÿÿ8ñ”šñ1
+Y
+java:S4973e"<Strings and Boxed types should be compared using "equals()".(ã´»Ò8ò”šñ1
+_
+java:S4973­"<Strings and Boxed types should be compared using "equals()".(ÏµÊşÿÿÿÿ8ò”šñ1
+_
+java:S4973±"<Strings and Boxed types should be compared using "equals()".(ş«´Êùÿÿÿÿ8ó”šñ1
+j
+java:S1226o"HIntroduce a new variable instead of reusing the parameter "tokenHeader".(‘Ú²şÿÿÿÿ8õ”šñ1
+U
+java:S2589e"8Remove this expression which always evaluates to "false"(ã´»Ò8è†ášñ1
+T
+java:S2589e"7Remove this expression which always evaluates to "true"(ã´»Ò8ã†ášñ1
+X	java:S1254"<This block of commented-out lines of code should be removed.(ÒĞÇÉ8á•šñ1
+F
+java:S1940e")Use the opposite operator ("!=") instead.(ã´»Ò8ã•šñ1
+F
+java:S1940e")Use the opposite operator ("!=") instead.(ã´»Ò8ã•šñ1
+F
+java:S1940e")Use the opposite operator ("!=") instead.(ã´»Ò8ã•šñ1
+L	java:S106q"+Replace this use of System.out by a logger.(æœç…şÿÿÿÿ8ä•šñ1
+]	java:S125p"<This block of commented-out lines of code should be removed.(Õ’¬›şÿÿÿÿ8ä•šñ1
+X	java:S125‰"<This block of commented-out lines of code should be removed.(×¸”/8ç•šñ1
+M	java:S106¶"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8ë•šñ1
+H	java:S106¾"+Replace this use of System.out by a logger.(¼²Á‚8ì•šñ1
+Y	java:S125¸"<This block of commented-out lines of code should be removed.(«¸’æ8ì•šñ1
+Y	java:S125½"<This block of commented-out lines of code should be removed.(éùíú8ì•šñ1
+Y	java:S125Ã"<This block of commented-out lines of code should be removed.(ë»ü®8í•šñ1
+H	java:S106Å"+Replace this use of System.out by a logger.(š‹«Ş8í•šñ1
+^	java:S125Ì"<This block of commented-out lines of code should be removed.(½Ã°ûÿÿÿÿ8ï•šñ1
+M	java:S106Ï"+Replace this use of System.out by a logger.(½øçÛşÿÿÿÿ8ó•šñ1
+M	java:S106Ğ"+Replace this use of System.out by a logger.(¾Ì‘ªÿÿÿÿÿ8ö•šñ1
+G	java:S106Ò"+Replace this use of System.out by a logger.(Ûòıd8ù•šñ1
+H	java:S106ß"+Replace this use of System.out by a logger.(‡®éÕ8ü•šñ1
+Y	java:S125Ş"<This block of commented-out lines of code should be removed.(ÃáÚğ8ó•šñ1
+Y	java:S125â"<This block of commented-out lines of code should be removed.(Ëõû¸8ô•šñ1
+M	java:S106ó"+Replace this use of System.out by a logger.(Å¹°Êşÿÿÿÿ8ùÀ’šñ1
+M	java:S106"+Replace this use of System.out by a logger.(ÄòºÙÿÿÿÿÿ8ıÀ’šñ1
+M	java:S106—"+Replace this use of System.out by a logger.(°ÅúÇıÿÿÿÿ8¡û’šñ1
+]
+java:S1128";Remove this unused import 'io.restassured.RestAssured.get'.(¹çšûÿÿÿÿ8„ˆášñ1
+h
+java:S1128"FRemove this unused import 'io.restassured.filter.cookie.CookieFilter'.(ê“ˆ¿üÿÿÿÿ8„ˆášñ1
+z
+java:S1128"XRemove this unused import 'io.restassured.specification.FilterableRequestSpecification'.(çƒİïıÿÿÿÿ8„ˆášñ1
+N
+java:S5960¡"+Remove this assertion from production code.(ğìŒŸúÿÿÿÿ8–šñ1
+L
+java:S1068 "/Remove this unused "httpRequest" private field.(“ì˜¤8–šñ1
+G
+java:S1068""+Remove this unused "oneData" private field.(–ÿD8–šñ1

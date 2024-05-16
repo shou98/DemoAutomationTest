@@ -1,0 +1,20 @@
+
+t
+java:S1104"RMake driver a static final constant or non-public and provide accessors if needed.(ÜçÁÈûÿÿÿÿ8€…¼˜î1
+x
+java:S1104"VMake properties a static final constant or non-public and provide accessors if needed.(Ñê¸¤øÿÿÿÿ8…¼˜î1
+w
+java:S1104"ZMake propertiesFile a static final constant or non-public and provide accessors if needed.(«Ó°ë8¿ƒ²î1
+N
+java:S1444",Make this "public static driver" field final(ÜçÁÈûÿÿÿÿ8Àƒ²î1
+
+java:S11301"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(®¶®ªûÿÿÿÿ8Ù›¶î1
+R
+java:S22094"5Change this instance-reference to a static reference.(ªÙù8Ù›¶î1
+X
+java:S2696A"6Make the enclosing method "static" or remove this set.(¯ƒÊşÿÿÿÿ8îƒ²î1
+™
+java:S1130I"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(‹Ÿêúÿÿÿÿ8éÄ˜³î1
+c
+java:S1126L"AReplace this if-then-else statement by a single return statement.(¬–¾ûÿÿÿÿÿ8õƒ²î1
+L	java:S106Q"+Replace this use of System.out by a logger.(³çışøÿÿÿÿ8÷ƒ²î1

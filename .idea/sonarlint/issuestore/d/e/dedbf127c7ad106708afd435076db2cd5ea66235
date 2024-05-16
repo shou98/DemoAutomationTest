@@ -1,0 +1,10 @@
+
+G	java:S106V"+Replace this use of System.out by a logger.(õµĞ™8×óÚ·î1
+T
+java:S1172^"7Remove these unused method parameters "role", "status".(ºÎ¢Ô8ØóÚ·î1
+Q
+java:S1128"/Remove this unused import 'javax.swing.Action'.(›ëÆ­ùÿÿÿÿ8Â”ë·î1
+b
+java:S1128"ERemove this unused import 'org.openqa.selenium.interactions.Actions'.(ÅÑÃ8¶äğ·î1
+M
+java:S5960p"+Remove this assertion from production code.(¤øÖôıÿÿÿÿ8ÚóÚ·î1

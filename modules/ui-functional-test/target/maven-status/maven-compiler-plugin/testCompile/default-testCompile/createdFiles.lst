@@ -1,0 +1,6 @@
+runners\TestSuite.class
+uistepdefs\DashboardStepdefs.class
+uistepdefs\PimStepdefs.class
+uistepdefs\Hooks.class
+uistepdefs\LoginStepdefs.class
+uistepdefs\AdminStepdefs.class

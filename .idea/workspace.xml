@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ed49a4e9-52bc-4a5f-885b-f4b9c5f04f84" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/modules/api-functional-test/src/main/java/apicore/ApiBasePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/api-functional-test/src/main/java/pageobject/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/api-functional-test/src/main/java/pageobject/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/api-functional-test/src/main/java/pageobject/Pim.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/api-functional-test/src/main/java/utils/PropertiesFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/api-functional-test/src/main/resources/endpoint/orangehrm/orgHrmApiEndpoint.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/api-functional-test/src/main/resources/json/orangehrm/CreateAdmin.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/api-functional-test/src/main/resources/json/orangehrm/CreateEmployee.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/api-functional-test/src/main/resources/json/orangehrm/Login.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/api-functional-test/src/main/resources/orangeHrmData.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/api-functional-test/src/test/java/apistepdefs/AdminStepdefs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/api-functional-test/src/test/java/apistepdefs/LoginStepdefs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/api-functional-test/src/test/java/apistepdefs/PimStepdefs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/api-functional-test/src/test/java/runners/APISuite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/api-functional-test/src/test/resources/features/api.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/api-functional-test/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/modules/api-functional-test/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/api-functional-test/src/test/resources/api.feature" beforeDir="false" afterPath="$PROJECT_DIR$/modules/api-functional-test/src/main/resources/json/orangehrm/Blank.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/ui-functional-test/src/main/resources/propertiespage/orangeHrmData.properties" beforeDir="false" afterPath="$PROJECT_DIR$/modules/ui-functional-test/src/main/resources/propertiespage/orangeHrmData.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/ui-functional-test/src/test/resources/features/UI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/modules/ui-functional-test/src/test/resources/features/UI.feature" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="shou &lt;thangcb98@gmail.com&gt;" />
+        <option value="shou\" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="5650f7bb-3c9e-48c0-a8b3-23f1fa8e1b13" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/modules/ui-functional-test/pom.xml" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadSourcesAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2exCLygI7w3WoZfB7UopXmnyc3N" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable&quot;: &quot;ALL&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Download/Project/DemoJunit/modules/api-functional-test/src/test/java/apistepdefs&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Download\Project\DemoJunit\modules\api-functional-test\src\main\resources\json\orangehrm" />
+      <recent name="D:\Download\Project\DemoJunit\modules\api-functional-test" />
+      <recent name="D:\Download\Project\DemoJunit\modules" />
+      <recent name="D:\Download\Project\DemoJunit\modules\ui-functional-test\src\test\java\uistepdefs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Download\Project\DemoJunit\modules\api-functional-test\src\main\resources" />
+      <recent name="D:\Download\Project\DemoJunit\modules\api-functional-test\src\test\resources\features" />
+      <recent name="D:\Download\Project\DemoJunit\modules\api-functional-test\src\main\resources\endpoint\orangehrm" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="org.core" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="utils" />
+      <recent name="runners" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Cucumber Java.Scenario: Login to OrangeHrm with admin and create new user">
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="runners.test" />
+      <module name="ui-functional-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runners.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Login to OrangeHrm with admin and create new user" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/modules/api-functional-test/src/test/resources/features/api.feature" />
+      <option name="GLUE" value="uistepdefs apistepdefs" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="api-functional-test" />
+      <option name="NAME_FILTER" value="^Login to OrangeHrm with admin and create new user$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Login to OrangeHrm with admin and create new user$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Login to OrangeHrm with admin and create new user" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Login to OrangeHrm with admin and create new user" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/modules/api-functional-test/src/test/resources/features/api.feature" />
+      <option name="GLUE" value="uistepdefs apistepdefs" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="api-functional-test" />
+      <option name="NAME_FILTER" value="^Login to OrangeHrm with admin and create new user$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Login to OrangeHrm with admin and create new user$&quot;" />
+      <shortenClasspath name="NONE" />
+      <option name="SUGGESTED_NAME" value="Scenario: Login to OrangeHrm with admin and create new user" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.test" />
+      <item itemvalue="Cucumber Java.Scenario: Login to OrangeHrm with admin and create new user" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cucumber Java.Scenario: Login to OrangeHrm with admin and create new user" />
+        <item itemvalue="Application.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ed49a4e9-52bc-4a5f-885b-f4b9c5f04f84" name="Changes" comment="" />
+      <created>1712836796959</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712836796959</updated>
+      <workItem from="1712836798749" duration="2154000" />
+      <workItem from="1712854444536" duration="7035000" />
+      <workItem from="1712914384670" duration="5812000" />
+      <workItem from="1712920223394" duration="1983000" />
+      <workItem from="1712991130266" duration="12204000" />
+      <workItem from="1713003384172" duration="5414000" />
+      <workItem from="1713009332930" duration="986000" />
+      <workItem from="1713010344984" duration="16934000" />
+      <workItem from="1713028537145" duration="2694000" />
+      <workItem from="1713165214743" duration="3508000" />
+      <workItem from="1713168802125" duration="10425000" />
+      <workItem from="1713179943238" duration="3076000" />
+      <workItem from="1713190387255" duration="600000" />
+      <workItem from="1713197252623" duration="4814000" />
+      <workItem from="1713202099428" duration="3293000" />
+      <workItem from="1713205422885" duration="761000" />
+      <workItem from="1713206209684" duration="2668000" />
+      <workItem from="1713254096348" duration="19154000" />
+      <workItem from="1713276281569" duration="3782000" />
+      <workItem from="1713280097445" duration="4860000" />
+      <workItem from="1713285102043" duration="133000" />
+      <workItem from="1713317527575" duration="18744000" />
+      <workItem from="1713338939655" duration="16903000" />
+      <workItem from="1713356450004" duration="7752000" />
+      <workItem from="1713514024979" duration="36000" />
+      <workItem from="1714012484665" duration="3666000" />
+      <workItem from="1714016444757" duration="288000" />
+      <workItem from="1714048129723" duration="150000" />
+      <workItem from="1715845436873" duration="13976000" />
+    </task>
+    <task id="LOCAL-00011" summary="update pom project">
+      <created>1712856931669</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1712856931669</updated>
+    </task>
+    <task id="LOCAL-00012" summary="update pom project">
+      <created>1712857157826</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1712857157826</updated>
+    </task>
+    <task id="LOCAL-00013" summary="update pom project">
+      <created>1712857280106</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1712857280106</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update pom project">
+      <created>1712857431840</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1712857431840</updated>
+    </task>
+    <task id="LOCAL-00015" summary="update pom project">
+      <created>1712857540136</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1712857540136</updated>
+    </task>
+    <task id="LOCAL-00016" summary="update pom project">
+      <created>1712857631843</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1712857631843</updated>
+    </task>
+    <task id="LOCAL-00017" summary="update pom project">
+      <created>1712857751475</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1712857751475</updated>
+    </task>
+    <task id="LOCAL-00018" summary="update pom project">
+      <created>1712858174231</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1712858174231</updated>
+    </task>
+    <task id="LOCAL-00019" summary="update pom project">
+      <created>1712858256770</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1712858256770</updated>
+    </task>
+    <task id="LOCAL-00020" summary="update pom project">
+      <created>1712858352505</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1712858352505</updated>
+    </task>
+    <task id="LOCAL-00021" summary="update pom project">
+      <created>1712858421000</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1712858421001</updated>
+    </task>
+    <task id="LOCAL-00022" summary="update pom project">
+      <created>1712858450945</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1712858450945</updated>
+    </task>
+    <task id="LOCAL-00023" summary="update pom project">
+      <created>1712858502719</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1712858502719</updated>
+    </task>
+    <task id="LOCAL-00024" summary="update pom project">
+      <created>1712858525584</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1712858525584</updated>
+    </task>
+    <task id="LOCAL-00025" summary="update pom project">
+      <created>1712858570821</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1712858570821</updated>
+    </task>
+    <task id="LOCAL-00026" summary="update pom project">
+      <created>1712858662336</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1712858662336</updated>
+    </task>
+    <task id="LOCAL-00027" summary="update pom project">
+      <created>1712858811256</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1712858811256</updated>
+    </task>
+    <task id="LOCAL-00028" summary="update pom project">
+      <created>1712858863279</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1712858863279</updated>
+    </task>
+    <task id="LOCAL-00029" summary="update pom project">
+      <created>1712858936789</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1712858936789</updated>
+    </task>
+    <task id="LOCAL-00030" summary="update pom project">
+      <created>1712859062029</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1712859062029</updated>
+    </task>
+    <task id="LOCAL-00031" summary="update pom project">
+      <created>1712859286733</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1712859286733</updated>
+    </task>
+    <task id="LOCAL-00032" summary="update pom project">
+      <created>1712859415983</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1712859415983</updated>
+    </task>
+    <task id="LOCAL-00033" summary="update pom project">
+      <created>1712859621483</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1712859621483</updated>
+    </task>
+    <task id="LOCAL-00034" summary="update pom project">
+      <created>1712859920703</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1712859920703</updated>
+    </task>
+    <task id="LOCAL-00035" summary="update pom project">
+      <created>1712860797037</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1712860797037</updated>
+    </task>
+    <task id="LOCAL-00036" summary="update pom project">
+      <created>1712860941774</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1712860941774</updated>
+    </task>
+    <task id="LOCAL-00037" summary="update pom project">
+      <created>1712916183256</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1712916183256</updated>
+    </task>
+    <task id="LOCAL-00038" summary="update pom project">
+      <created>1712916615405</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1712916615405</updated>
+    </task>
+    <task id="LOCAL-00039" summary="update pom project">
+      <created>1712917004365</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1712917004365</updated>
+    </task>
+    <task id="LOCAL-00040" summary="update">
+      <created>1712917171361</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1712917171361</updated>
+    </task>
+    <task id="LOCAL-00041" summary="update">
+      <created>1712917241007</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1712917241007</updated>
+    </task>
+    <task id="LOCAL-00042" summary="update">
+      <created>1712922182343</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1712922182343</updated>
+    </task>
+    <task id="LOCAL-00043" summary="setup module API">
+      <created>1713006307488</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1713006307488</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Update code for module test UI">
+      <created>1713010631781</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1713010631781</updated>
+    </task>
+    <task id="LOCAL-00045" summary="setup module API">
+      <created>1713013162208</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1713013162208</updated>
+    </task>
+    <task id="LOCAL-00046" summary="update code ui-functional-test">
+      <created>1713013502869</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1713013502869</updated>
+    </task>
+    <task id="LOCAL-00047" summary="update code ui-functional-test">
+      <created>1713013736196</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1713013736196</updated>
+    </task>
+    <task id="LOCAL-00048" summary="fix ui-functional-test">
+      <created>1713014584317</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1713014584317</updated>
+    </task>
+    <task id="LOCAL-00049" summary="update code ui-functional-test">
+      <created>1713015596393</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1713015596393</updated>
+    </task>
+    <task id="LOCAL-00050" summary="update code ui-functional-test">
+      <created>1713031204442</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1713031204442</updated>
+    </task>
+    <task id="LOCAL-00051" summary="update code ui-functional-test">
+      <created>1713179378226</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1713179378227</updated>
+    </task>
+    <task id="LOCAL-00052" summary="update code ui-functional-test">
+      <created>1713202033333</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1713202033334</updated>
+    </task>
+    <task id="LOCAL-00053" summary="update code ui-functional-test">
+      <created>1713207151660</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1713207151660</updated>
+    </task>
+    <task id="LOCAL-00054" summary="update feature and code">
+      <created>1713267128234</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1713267128235</updated>
+    </task>
+    <task id="LOCAL-00055" summary="fix xpath">
+      <created>1713269789714</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1713269789714</updated>
+    </task>
+    <task id="LOCAL-00056" summary="fixed headless">
+      <created>1713270108068</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1713270108068</updated>
+    </task>
+    <task id="LOCAL-00057" summary="fixed code">
+      <created>1713272850012</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1713272850012</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Update README.md">
+      <created>1713273353930</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1713273353930</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Update README.md &amp; TestSuite.java">
+      <created>1713284906607</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1713284906607</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update project" />
+    <MESSAGE value="update pom project" />
+    <MESSAGE value="update" />
+    <MESSAGE value="Update code for module test UI" />
+    <MESSAGE value="setup module API" />
+    <MESSAGE value="fix ui-functional-test" />
+    <MESSAGE value="update code ui-functional-test" />
+    <MESSAGE value="update feature and code" />
+    <MESSAGE value="fix xpath" />
+    <MESSAGE value="fixed headless" />
+    <MESSAGE value="fixed code" />
+    <MESSAGE value="Update README.md" />
+    <MESSAGE value="Update README.md &amp; TestSuite.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update README.md &amp; TestSuite.java" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="4" />
+        </breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/modules/ui-functional-test/src/test/java/uistepdefs/DashboardStepdefs.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/modules/api-functional-test/src/main/java/apicore/ApiBasePage.java</url>
+          <line>160</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/DemoJunit$Scenario__Login_to_OrangeHrm_with_valid_username_and_password.ic" NAME="Scenario: Login to OrangeHrm with valid username and password Coverage Results" MODIFIED="1712920028065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>io.cucumber.core.cli.*</FILTER>
+    </SUITE>
+  </component>
+</project>
