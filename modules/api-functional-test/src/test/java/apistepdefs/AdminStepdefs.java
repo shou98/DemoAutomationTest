@@ -10,7 +10,7 @@ public class AdminStepdefs {
   Response response;
   @And("Call API create new Admin on Admin page")
   public void callApiCreateNewAdmin() throws IOException {
-    response = Admin.createNewAdmin("Blank.json", "orangeHrm", "lointoken", "GET", null,
+    response = Admin.createNewAdmin("CreatAdmin.json", "orangeHrm", "createAdmin", "POST", null,
         null);
   }
   }
