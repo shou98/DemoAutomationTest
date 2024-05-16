@@ -12,6 +12,97 @@
 
   <groupId>org.api-functional-test</groupId>
   <artifactId>api-functional-test</artifactId>
+  <build>
+    <plugins>
+      <!--      <plugin>-->
+      <!--        <artifactId>maven-compiler-plugin</artifactId>-->
+      <!--        <configuration>-->
+      <!--          <source>11</source>-->
+      <!--          <target>11</target>-->
+      <!--        </configuration>-->
+      <!--        <version>3.8.1</version>-->
+      <!--      </plugin>-->
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <consoleOutputReporter>
+            <disable>true</disable>
+          </consoleOutputReporter>
+          <reportFormat>plain</reportFormat>
+          <statelessTestsetInfoReporter
+                  implementation="${maven-surefire.testsetInfoReporter}">
+            <printStacktraceOnError>true</printStacktraceOnError>
+            <printStacktraceOnFailure>true</printStacktraceOnFailure>
+            <printStderrOnError>true</printStderrOnError>
+            <printStderrOnFailure>true</printStderrOnFailure>
+            <printStderrOnSuccess>false</printStderrOnSuccess>
+            <printStdoutOnError>true</printStdoutOnError>
+            <printStdoutOnFailure>true</printStdoutOnFailure>
+            <printStdoutOnSuccess>false</printStdoutOnSuccess>
+          </statelessTestsetInfoReporter>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <artifactId>maven-surefire-junit5-tree-reporter</artifactId>
+            <groupId>me.fabriciorby</groupId>
+            <version>${maven-surefire-junit5-tree-reporter-version}</version>
+          </dependency>
+        </dependencies>
+        <version>${maven-surefire-plugin-version}</version>
+      </plugin>
+      <!--      <plugin>-->
+      <!--        <artifactId>maven-surefire-plugin</artifactId>-->
+      <!--        <groupId>org.apache.maven.plugins</groupId>-->
+      <!--        <version>${maven-surefire-plugin-version}</version>-->
+      <!--      </plugin>-->
+      <plugin>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <executions>
+          <execution>
+            <configuration>
+              <includes>
+                <include>**/*Suite.java</include>
+              </includes>
+            </configuration>
+            <goals>
+              <goal>integration-test</goal>
+              <goal>verify</goal>
+            </goals>
+          </execution>
+        </executions>
+        <groupId>org.apache.maven.plugins</groupId>
+        <version>${maven-failsafe-plugin-version}</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <configuration>
+          <excludes>*.class</excludes>
+          <configLocation>google_checks.xml</configLocation>
+          <consoleOutput>true</consoleOutput>
+          <failOnViolation>true</failOnViolation>
+          <includeTestSourceDirectory>true</includeTestSourceDirectory>
+          <violationSeverity>warning</violationSeverity>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <artifactId>checkstyle</artifactId>
+            <groupId>com.puppycrawl.tools</groupId>
+            <version>10.15.0</version>
+          </dependency>
+        </dependencies>
+        <executions>
+          <execution>
+            <goals>
+              <goal>check</goal>
+            </goals>
+            <phase>test-compile</phase>
+          </execution>
+        </executions>
+        <groupId>org.apache.maven.plugins</groupId>
+        <version>3.3.1</version>
+      </plugin>
+    </plugins>
+  </build>
   <dependencies>
     <dependency>
       <groupId>io.cucumber</groupId>
@@ -27,6 +118,12 @@
       <groupId>io.rest-assured</groupId>
       <artifactId>rest-assured</artifactId>
       <version>5.3.0</version>
+    </dependency>
+    <dependency>
+      <artifactId>junit-jupiter-api</artifactId>
+      <groupId>org.junit.jupiter</groupId>
+      <scope>test</scope>
+      <version>${junit-jupiter-api-version}</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -62,6 +159,13 @@
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven-surefire.testsetInfoReporter>
+      org.apache.maven.plugin.surefire.extensions.junit5.JUnit5StatelessTestsetInfoTreeReporter
+    </maven-surefire.testsetInfoReporter>
+    <maven-surefire-junit5-tree-reporter-version>1.2.1</maven-surefire-junit5-tree-reporter-version>
+    <maven-surefire-plugin-version>3.2.5</maven-surefire-plugin-version>
+    <maven-failsafe-plugin-version>3.0.0-M3</maven-failsafe-plugin-version>
+    <junit-jupiter-api-version>5.10.2</junit-jupiter-api-version>
   </properties>
 
 </project>
