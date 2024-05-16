@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="baa5a379-3131-4109-8e55-8d54279e2bab" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+    <list default="true" id="baa5a379-3131-4109-8e55-8d54279e2bab" name="Changes" comment="test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/api-functional-test/src/main/resources/endpoint/orangehrm/orgHrmApiEndpoint.properties" beforeDir="false" afterPath="$PROJECT_DIR$/modules/api-functional-test/src/main/resources/endpoint/orangehrm/orgHrmApiEndpoint.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/api-functional-test/src/test/java/apistepdefs/AdminStepdefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/modules/api-functional-test/src/test/java/apistepdefs/AdminStepdefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/api-functional-test/src/test/resources/features/api.feature" beforeDir="false" afterPath="$PROJECT_DIR$/modules/api-functional-test/src/test/resources/features/api.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +22,75 @@
     <setting file="file://$PROJECT_DIR$/modules/ui-functional-test/pom.xml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Scenario: Login to OrangeHrm with admin and create new user" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/modules/api-functional-test/src/test/resources/features/api.feature" />
+      <option name="GLUE" value="uistepdefs apistepdefs" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="api-functional-test" />
+      <option name="NAME_FILTER" value="^Login to OrangeHrm with admin and create new user$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Login to OrangeHrm with admin and create new user$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Login to OrangeHrm with admin and create new user" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cucumber Java.Scenario: Login to OrangeHrm with admin and create new user" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="test">
+      <created>1715860186176</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715860186176</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DemoJunit$Scenario__Login_to_OrangeHrm_with_valid_username_and_password.ic" NAME="Scenario: Login to OrangeHrm with valid username and password Coverage Results" MODIFIED="1712920028065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
