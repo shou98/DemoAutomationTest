@@ -3,11 +3,15 @@ Java-Selenium-Cucumber-Junit
 
 Run test by tag feature of module
 
+UI functional 
+
 mvn clean verify -pl modules/ui-functional-test -D"cucumber.filter.tags=@UI" -Dbrowser=chrome
 
-mvn clean verify -pl modules/api-functional-test -D"cucumber.filter.tags=@UI" -Dbrowser=chrome
+API functional
 
-Change @UI = your tag
+mvn clean verify -pl modules/api-functional-test -D"cucumber.filter.tags=@API"
+
+Change @UI or @API = your tag and change your modules/**-functional-test = your modules
 
 -Dbrowser= = browser name 
 example = -Dbrowser=chrome
@@ -16,4 +20,5 @@ mvn clean verify -pl modules/ui-functional-test -Dbrowser=chrome
 
 Check style code by google: 
 mvn checkstyle:checkstyle
-generating-report: need "surefire-report:report" after command line
+
+If you want to generate report: need "surefire-report:report" after command line

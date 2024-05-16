@@ -3,16 +3,21 @@ package utils;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-/** PropertiesFile. */
+/**
+ * PropertiesFile.
+ */
 public class PropertiesFile {
 
   static String projectPath = System.getProperty("user.dir") + "/";
   private static Properties properties;
   private static FileInputStream fileIn;
-  private static String orgHrmApiEndpoint = "src/main/resources/endpoint/orangehrm/orgHrmApiEndpoint.properties";
+  private static String orgHrmApiEndpoint = "src/main/resources/endpoint/orangehrm"
+          + "/orgHrmApiEndpoint.properties";
   private static String orangeHrmData = "src/main/resources/orangeHrmData.properties";
 
-  /** getDataFromPropertiesFile. */
+  /**
+   * getDataFromPropertiesFile.
+   */
   public static String getDataOrangeHrm(String keyProp) {
     properties = new Properties();
     String valuedata = null;
@@ -27,6 +32,10 @@ public class PropertiesFile {
     }
     return valuedata;
   }
+
+  /**
+   * getEndpointOrangeHrm.
+   */
   public static String getEndpointOrangeHrm(String keyProp) {
     properties = new Properties();
     String valueEndpoint = null;

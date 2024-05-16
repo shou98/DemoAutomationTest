@@ -1,7 +1,7 @@
 package apistepdefs;
 
-import static apicore.ApiBasePage.getTokenOrgHRM;
 import static apicore.ApiBasePage.getSetCookie;
+import static apicore.ApiBasePage.getTokenOrgHrm;
 import static apicore.ApiBasePage.token;
 import static apicore.ApiBasePage.verifyStatusCode;
 
@@ -10,15 +10,22 @@ import io.restassured.response.Response;
 import java.io.IOException;
 import pageobject.Login;
 
+/**
+ * class LoginStepdefs.
+ */
 public class LoginStepdefs {
+
   Login login;
   Response response;
 
+  /**
+   * Given.
+   */
   @Given("Login and get token successfully")
-  public void  loginAndGetToken() throws IOException {
+  public void loginAndGetToken() throws IOException {
     response = login.getToken("Blank.json", "orangeHrm", "lointoken", "GET", null,
         null);
-    getTokenOrgHRM();
+    getTokenOrgHrm();
     getSetCookie();
     verifyStatusCode(200);
     response = login.sendRequestData("Login.json", "orangeHrm", "loginValidate", "POST", token,
@@ -27,9 +34,6 @@ public class LoginStepdefs {
     verifyStatusCode(302);
     response = login.getToken("Blank.json", "orangeHrm", "loginIndex", "GET", null,
         null);
-//    getSetCookie();
     verifyStatusCode(200);
-//    response = login.sendRequestData("CreateEmployee.json", "orangeHrm", "createEmployee", "POST", null,null);
-//    verifyStatusCode(200);
   }
 }

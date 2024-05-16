@@ -15,6 +15,6 @@ import org.junit.runner.RunWith;
         "pretty",
         "html:target/cucumber-html-reports/cucumber.html"},
     stepNotifications = true,
-    tags = "@UI")
-public class APISuite {
+    tags = "@API")
+public class ApiSuite {
 }
