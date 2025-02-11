@@ -3,6 +3,8 @@ package apicore;
 
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -77,7 +79,7 @@ public class ApiBasePage {
             .baseUri(baseUrlRq);
     switch (method.toUpperCase()) {
       case "GET":
-        response = httpRequest.when().get(endPointRq);
+        response = httpRequest.when().get(endPointRq).then().extract().response();
         break;
       case "POST":
         if (jsonfilepath.contains("Login.json")) {
@@ -85,7 +87,7 @@ public class ApiBasePage {
         } else {
           newDataPayload = payload;
         }
-        response = httpRequest.body(newDataPayload).when().post(endPointRq);
+        response = httpRequest.body(newDataPayload).when().post(endPointRq).then().extract().response();
         break;
       case "DELETE":
         httpRequest.body(newDataPayload).when().delete(endPointRq);
@@ -107,7 +109,7 @@ public class ApiBasePage {
    * verifyStatusCode.
    */
   public static void verifyStatusCode(int sttCode) {
-    String statusLine = response.getStatusLine();
+    String statusLine = String.valueOf(response.getStatusCode());
     if (statusLine == "302") {
       assertEquals("Correct status code returned", statusLine,
           "HTTP/1.1 " + sttCode + " " + "Found");
@@ -117,9 +119,13 @@ public class ApiBasePage {
     }
     if (statusLine.contains("401")) {
       assertEquals("HTTP/1.1 " + sttCode, "" + statusLine);
-      System.out.println();
+      System.out.println("Failed");
     }
-    System.out.println("Statut code: " + statusLine);
+    if ("422".equals(statusLine)) {
+      System.out.println("Request failed with status code 422: Unprocessable Entity");
+      assertEquals("Request failed",statusLine);
+    }
+
   }
 
   /**
@@ -150,6 +156,7 @@ public class ApiBasePage {
     }
     System.out.println("Token: " + token);
     return token = data1;
+
   }
 
   /**
